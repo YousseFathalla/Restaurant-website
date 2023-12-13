@@ -1,0 +1,40 @@
+$grasshopper: #2d3b1f;
+
+$BleachedCedar : #4e2e60;
+
+$bitterLemon: #cfda02;
+
+$rangitoto:#99e54d;
+
+$buttercup:#f1ad0e;
+
+
+// #4c978a
+
+// $rangoonGreen: #363e2f;
+
+$primary: $grasshopper;
+$secondary: $BleachedCedar;
+$success: $bitterLemon;
+$info: $rangitoto;
+$warning: $buttercup;
+
+
+$background-one:#1b191c;
+$background-two:#f9f6ee;
+
+.background-one {
+  background-color: $background-one;
+}
+.background-two {
+  background-color: $background-two;
+}
+
+.text-balance{
+  text-wrap: balance;
+}
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

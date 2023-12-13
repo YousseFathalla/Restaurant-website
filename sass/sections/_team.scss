@@ -1,0 +1,32 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+
+
+#team {
+   .row  > div {
+         background-color: $background-two ;
+         text-align: center;
+   }
+   img {
+    border-radius: 3rem;
+    max-width: 382px;
+    max-height: 360px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    object-fit:cover ;
+   }
+   .card-body {
+      a {
+         transition: 0.5s;
+         svg {
+            width: 27px;
+            height: 27px;
+            margin-right: 6px;
+         }
+         &:hover {
+            color: $success;
+         }
+      }
+   }
+}

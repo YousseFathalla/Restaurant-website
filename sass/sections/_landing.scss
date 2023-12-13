@@ -1,0 +1,68 @@
+@use '../custom' as *;
+@use'../components/mixin' as *;
+
+/* ------------------------------- SECTION-ONE ------------------------------ */
+
+.section-one-landing {
+  padding-top: 9rem;
+  @include media-breakpoint-down(md){
+    padding-top: 5rem;
+  }
+  @include content-offer;
+  .row {
+    .content {
+      background-color: $primary;
+      border-radius: 3rem;
+      padding: 2rem;
+    }
+    .img-box {
+      background-image: url(../../images/landing-images/3rd-image.jpg);
+      @include imgBox;
+    }
+  }
+}
+
+/* ------------------------------ date with us ------------------------------ */
+.date-with-us {
+  .container {
+    a {
+      &:hover {
+        transition: 0.5s ease;
+        color: $info !important;
+       }
+     }
+    }
+  }
+
+  /* -------------------------------- SECTION 4 ------------------------------- */
+
+  .section-four-landing {
+    padding-top: 5rem;
+
+    .row {
+      .content {
+        background-color: $primary;
+        border-radius: 3rem;
+        padding: 2rem;
+        height: 100%;
+        text-align: center;
+        @include flex-center;
+        flex-direction: column;
+      }
+      .img-box {
+        @include imgBox;
+      }
+      .img-box-one{
+        background-image: url(./images/landing-images/4th-image.jpg);
+      }
+      .img-box-two{
+        background-image: url(./images/landing-images/5th-image.jpg);
+      }
+    }
+    .box-two {
+      @include media-breakpoint-down(lg) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  

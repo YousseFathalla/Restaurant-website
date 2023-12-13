@@ -1,0 +1,42 @@
+@use '../custom' as *;
+@use'../components/mixin' as *;
+
+/* ------------------------------- SECTION ONE ------------------------------ */
+.section-one-about,
+.section-two-about
+  {
+  .row {
+    border-radius: 3rem;
+    background-color: wheat; //////////
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg){
+      text-align: center
+    };
+  }
+  .box-img {
+    img {
+      border-radius: 2rem;
+    }
+  }
+}
+.section-one-about{
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+  @include media-breakpoint-down(lg){
+    padding-top: 5rem;
+    }
+}
+.section-two-about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  .row {
+    @include media-breakpoint-down(lg){
+      flex-direction: column-reverse;
+      }
+    }
+  }

@@ -1,0 +1,56 @@
+@use '../custom' as *;
+@use'../components/mixin' as *;
+
+/* ------------------------------- SECTION ONE ------------------------------ */
+
+
+.section-one-menu{
+  padding-top: 9rem;
+    @include media-breakpoint-down(lg){
+    padding-top: 5rem;
+    text-align: center
+  }
+}
+
+
+
+.section-two-menu,
+.section-three-menu {
+  padding-bottom: 2rem;
+  .content {
+    margin-top: 1.75rem;
+  }
+  h5 {
+    color: $warning;
+    span {
+      color: $info;
+    }
+  }
+}
+img {
+  border-radius: 2rem;
+  }
+.content, 
+.box-img {
+  @include media-breakpoint-down(lg){
+    text-align: center !important;
+    }
+}
+
+
+  .section-two-menu {
+    .box-img {
+      text-align: end;
+      }
+    }
+  .section-three-menu {
+    .row {
+      @include media-breakpoint-down(lg){
+        flex-direction: column-reverse;
+    }
+    }
+    .content {
+      text-align: end;
+      }
+    }
+  

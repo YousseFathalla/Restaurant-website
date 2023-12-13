@@ -1,0 +1,48 @@
+@use '../custom' as *;
+@use'../components/mixin' as *;
+
+.footer {
+   padding-top: 3rem;
+
+  .contact-box-icon {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    svg {
+      width: 54px;
+      height: 54px;
+    }
+  }
+  .contact-box-info {
+    h3 {
+      color: $warning;
+      padding-top: 1rem;
+      font-size: 1.125rem ;
+    }
+    h5{
+      padding-bottom: 0.5rem;
+      font-size: 1.125rem ;
+    }
+    a {
+      text-decoration: none;
+      color: $warning;
+      font-weight: bold;
+      font-size: 1.125rem ;
+      transition: 0.5s ease;
+      &:hover {
+        color: $success;
+      }
+    }
+  }
+  .copy-right {
+    padding-bottom: 2rem;
+    a {
+      color: $warning;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.5s ease;
+      &:hover {
+        color: $success;
+      }
+    }
+  }
+}

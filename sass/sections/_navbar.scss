@@ -1,0 +1,30 @@
+@use '../custom' as *;
+
+.navbar {
+  position: fixed;
+  padding: 4px 0px;
+  top: 0;
+  width: 100%;
+  z-index:1001;
+  transition: top 0.5s ease;
+  background-color: rgba($primary,0.95) !important;
+  .button-toggler {
+    margin-right: 5px;
+    height: 45px;
+  }
+  .links {
+    li  {
+      padding-left: 24px;
+      :hover,
+      .active {
+        color: $warning !important;
+      }
+    }
+    a {
+      color: white !important;
+    }
+  }
+}
+.hidden-navbar {
+  top: -100%;
+}

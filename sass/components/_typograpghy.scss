@@ -1,0 +1,120 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+hr {
+  width: 50%;
+  margin: 3rem auto 4rem;
+  background-color: $warning;
+  height: 5px;
+  border: none;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+body {
+  background-color: $background-one;
+}
+
+.btn {
+  &:hover {
+    background-color: $success;
+    border-color: $success;
+  }
+}
+
+/* -------------------------- DATE WITH US SECTION -------------------------- */
+.date-with-us {
+  .container {
+    text-align: center;
+    h1 {
+      font-weight: bold;
+    }
+    p {
+      padding-top: 1rem;
+    }
+    a {
+      font-size: 2.25rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @include media-breakpoint-down(md){
+      h1 {
+        font-size: 1.75rem;
+      }
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+/* ------------------------------- back-to-top ------------------------------ */
+.back-to-top {
+  position: fixed;
+  right: -5rem;
+  bottom: 5.5rem;
+  z-index: 9999;
+  transition: 0.5s ease;
+  &:hover {
+    background-color: $info;
+    border-color: $info;
+  }
+  svg {
+    @include absoluteCenter;
+    color: $background-one;
+    font-size: 1.5rem;
+  }
+}
+.show-arrow {
+    right: 2.85rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    opacity: 0.75;
+    @include media-breakpoint-down(md){
+      right: 0.85rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  /* --------------------------- NAVIGATION BULLETS --------------------------- */
+.navigation {
+    position: fixed;
+    display: flex;
+    transform: translate(-50%,-50%);
+    top: -4rem;
+    left: 50%;
+    transition:  0.5s ease;
+    z-index: 9998;
+    .bullet {
+      font-size: 22px;
+      padding-right: 2.7rem;
+      list-style: none;
+      opacity: 0.85;
+      a {
+        @include flex-center;
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        transform: translate(-50%, -50%);
+        color: $background-one;
+        background-color: $warning;
+        border-radius: 10px;
+        transition: 0.5s;
+        &:hover {
+          background-color: $info;
+        }
+      }
+    }
+  }
+
+  .show-navigation {
+    top: 1.85rem;
+    @include media-breakpoint-down(md){
+      a {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+

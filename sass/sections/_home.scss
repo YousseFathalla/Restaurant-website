@@ -1,0 +1,45 @@
+@use '../custom' as *;
+@use'../components/mixin' as *;
+/* ------------------------------- SECTION ONE ------------------------------ */
+.section-one {
+  background-image:url(../../images/background/background1.jpg);
+  @include background-section;
+  @include content-offer;
+}
+
+/* ------------------------------- SECTION TWO ------------------------------ */
+.section {
+  .hero-text {
+  @include text-overlay;
+  }
+  img {
+    @include img;
+  }
+  .food-menu {
+    @include food-menu;
+  }
+}
+
+/* -------------------------------- our menu -------------------------------- */
+
+.our-menu {
+  text-align: center;
+  color: white;
+  h1 {
+    @include text-gradient;
+  }
+  img {
+    @include img;
+  }
+}
+
+/* ------------------------------- CONTACT US ------------------------------- */
+
+.contact-us {
+  min-height: 800px;
+  background-image: url(./images/background-2.jpg);
+  @include background-section;
+  @include content-offer;
+  background-position: 70%;
+}
+
