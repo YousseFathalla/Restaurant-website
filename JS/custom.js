@@ -9,6 +9,8 @@ window.addEventListener("scroll", function () {
   }
 });
 
+window.screenY;
+
 /* ---------------------------- ARROW BACK TO TOP --------------------------- */
 
 let scrollTop = document.querySelector(".back-to-top");
@@ -58,6 +60,26 @@ window.addEventListener("scroll", () => {
 var tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
 );
+
+console.log(tooltipTriggerList);
+
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
+
+/* -------------------------------- CopyRight ------------------------------- */
+
+const currentYear = new Date().getFullYear();
+
+const copyRightNotice = `@Copyright <a> ${currentYear}</a> | Images From
+<a target="_blank" href="https://www.pexels.com/">Pexels.com</a>
+| Created by
+<a href="#"> YF</a>
+WebSite inspiration
+<a
+  href="https://nicepage.com/website-templates/preview/lower-food-cost-4298248?device=desktop"
+  target="_blank"
+  >NicePage</a
+>`;
+
+document.getElementById("copyrightSection").innerHTML = copyRightNotice;
